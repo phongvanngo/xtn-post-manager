@@ -1,0 +1,9 @@
+export const OPEN_POST_FORM = "OPEN_POST_FORM";
+export const CLOSE_POST_FORM = "CLOSE_POST_FORM";
+export const SAVE_POST = "SAVE_POST";
+export const ADD_POST = "ADD_POST";
+export const UPDATE_POST = "UPDATE_POST"
+export const FETCH_POSTS_DATA = "FETCH_POSTS_DATA"
+export const EDIT_POST = "EDIT_POST"
+export const SET_NULL ="SET_NULL"
+export const DELETE_POST ="DELETE_POST"
