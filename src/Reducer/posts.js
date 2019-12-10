@@ -1,6 +1,6 @@
 import * as Types from '../Constants/ActionTypes'
 var initialState = [];
-
+var x;
 var posts = (state = initialState, action) => {
   switch (action.type) {
     case Types.FETCH_POSTS_DATA:
@@ -15,10 +15,8 @@ var posts = (state = initialState, action) => {
         time_created: action.post.time_created
       }
       state.push(newPost);
-      console.log('done')
       return [...state];
     case Types.UPDATE_POST:
-      var x;
       for (x in state) {
         if (state[x]._id === action.post.id) {
           state[x].title = action.post.title;
@@ -28,8 +26,7 @@ var posts = (state = initialState, action) => {
         }
       }
       return [...state];
-      case Types.DELETE_POST:
-      var x;
+    case Types.DELETE_POST:
       for (x in state) {
         if (state[x]._id === action.id) {
           break;

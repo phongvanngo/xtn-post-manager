@@ -4,10 +4,9 @@ import { openPostForm, editPost, fetchPostsDataRequest, deletePostRequest } from
 
 class PostItem extends Component {
 
-  componentDidMount() {
-    console.log('mount')
-    this.props.fetchAllPosts();
-  }
+  // componentDidMount() {
+  //   this.props.fetchAllPosts();
+  // }
 
   button_deletePost = () => {
     this.props.deletePost(this.props.post._id)
