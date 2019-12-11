@@ -38,4 +38,5 @@ var posts = (state = initialState, action) => {
   }
 }
 
+
 export default posts;

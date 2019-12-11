@@ -42,6 +42,7 @@ export const addPostRequest = (postData) => {
 }
 export const updatePost = (post) => {
   return {
+
     type: Types.UPDATE_POST,
     post
   }
@@ -63,7 +64,6 @@ export const updatePostRequest = (postData) => {
     }
   ]
   return (dispatch) => {
-    console.log(postData.id)
     return callApi(`post/${postData.id}`, 'PATCH', postDataChange).then(res => {
       dispatch(updatePost(postData))
     })

@@ -4,6 +4,7 @@ import CKEditor from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 import ImgurUploaderInit from 'ckeditor5-imgur-uploader';
 import { closePostForm, addPostRequest, updatePostRequest, set_isPostEditing_null } from './../Actions/Actions'
+
 class PostForm extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +46,7 @@ class PostForm extends Component {
       }
 
       //post data --------------
-      console.log(PostData);
+      
       if (this.props.isPostEditing === null) {
         this.props.addNewPost(PostData)
       } else {
@@ -173,9 +174,11 @@ const mapDispatchToProps = (dispatch, props) => {
       dispatch(set_isPostEditing_null())
     },
     addNewPost: (postData) => {
+
       dispatch(addPostRequest(postData));
     },
     onUpdatePost: (postData) => {
+
       dispatch(updatePostRequest(postData));
       dispatch(set_isPostEditing_null())
     }

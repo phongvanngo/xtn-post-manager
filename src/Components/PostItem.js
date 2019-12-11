@@ -61,7 +61,7 @@ class PostItem extends Component {
 
 const mapStateToProps = (state) => {
   return {
-
+    posts: state.posts
   }
 };
 const mapDispatchToProps = (dispatch, props) => {

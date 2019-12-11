@@ -6,7 +6,6 @@ import PostsList from './PostsList';
 class PostManager extends Component {
 
   render() {
-
     return (
       <div className="container-fluid">
         {this.props.isDisplayPostForm ? <PostForm /> : <PostsList />}
@@ -16,6 +15,7 @@ class PostManager extends Component {
 }
 
 const mapStateToProps = (state) => {
+  
   return {
     isDisplayPostForm: state.isDisplayPostForm
   }

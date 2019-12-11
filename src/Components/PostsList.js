@@ -6,10 +6,12 @@ import PostItem from './PostItem'
 class PostsList extends Component {
 
   componentDidMount() {
+
     this.props.fetchAllPosts();
   }
 
   render() {
+
     
     var showPostsList = this.props.posts.map((ele, index) => {
       return (
@@ -47,7 +49,7 @@ class PostsList extends Component {
 }
 
 const mapStateToProps = (state) => {
-  
+
   return {
     posts: state.posts
   }
